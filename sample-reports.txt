@@ -1,0 +1,42 @@
+Paste any of the blocks below into the Parse page. Blocks are separated by "---" or two blank lines; the parser handles both.
+
+---
+
+Date: 2026-04-16
+Project: Bisha
+Robot: 72
+Operator: A
+Location: mvps 94
+Marks: 865
+
+---
+
+Daily report
+Robot: R-12
+Operator - Raj
+Project: Alpha
+Date: 16/04/2026
+Marks marked: 240
+Site: Site A
+Start 08:00  End 16:30
+Notes: smooth shift
+
+---
+
+🤖 Robot R-14
+Op: Priya
+Project - Bravo
+On 2026-04-16
+Marked 185
+Site C
+Remarks: calibration at 2pm
+
+---
+
+Robot number: R-21
+Operated by Arjun
+Job: Metro Line 7
+Date: 2026-04-16
+Total marks: 312
+Zone: Tunnel 3
+From 07:00 To 19:00

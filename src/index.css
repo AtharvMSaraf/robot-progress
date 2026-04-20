@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body {
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family: ui-sans-serif, system-ui, Inter, sans-serif;
+}
+
+@layer components {
+  .card      { @apply bg-panel border border-border rounded-xl; }
+  .btn-primary { @apply bg-accent text-black font-semibold hover:brightness-110 transition; }
+  .btn-ghost { @apply border border-border text-text hover:border-accent hover:text-accent transition; }
+  .input-dark {
+    @apply bg-[#0f0f0f] text-text border border-border rounded-md px-3 py-2 text-sm
+           focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20;
+  }
+}
+
+/* Segmented date-range control */
+.segmented { display: inline-flex; background:#0f0f0f; border:1px solid #262626; border-radius:10px; padding:3px; gap:2px; }
+.seg { padding:6px 12px; border-radius:7px; font-size:13px; color:#a3a3a3; transition: all .15s; cursor:pointer; border:none; background:transparent; }
+.seg:hover { color:#f5f5f5; background:#171717; }
+.seg.active { background:#facc15; color:#000; font-weight:600; }
+.seg.active:hover { background:#fde047; }
+
+/* Filter pills */
+.pill { display:inline-flex; align-items:center; gap:7px; padding:6px 12px; border:1px solid #262626; border-radius:999px; background:#121212; font-size:13px; color:#a3a3a3; cursor:pointer; transition: all .15s; }
+.pill:hover { border-color:#3f3f3f; color:#f5f5f5; background:#161616; }
+.pill.active { background:rgba(250,204,21,0.10); border-color:rgba(250,204,21,0.55); color:#f5f5f5; padding-right:6px; }
+.pill .pill-label { font-weight:500; }
+.pill.active .pill-label { color:#a3a3a3; font-weight:400; }
+.pill .pill-value { color:#facc15; font-weight:600; }
+.pill .chev { color:#a3a3a3; font-size:10px; }
+.pill-x { width:20px; height:20px; border-radius:999px; background:#1f1f1f; color:#a3a3a3; display:grid; place-items:center; border:none; cursor:pointer; font-size:13px; line-height:1; padding:0; }
+.pill-x:hover { background:#facc15; color:#000; }
+.count-chip { font-size:11px; padding:3px 9px; border-radius:999px; background:rgba(250,204,21,0.12); color:#facc15; border:1px solid rgba(250,204,21,0.30); font-weight:600; letter-spacing:.2px; }
+
+/* Table */
+table.entries thead { background:#0f0f0f; color:#a3a3a3; }
+table.entries tbody tr { border-top:1px solid #1f1f1f; }
+table.entries tbody tr:hover { background:#161616; }
+table.entries th { text-align:left; padding:.5rem 1rem; font-weight:500; font-size:.8rem; }
+table.entries td { padding:.5rem 1rem; font-size:.875rem; }
+
+/* Dropdown menu for pills */
+.menu { background:#121212; border:1px solid #262626; border-radius:10px; overflow:hidden; min-width:180px; box-shadow:0 8px 30px rgba(0,0,0,.4); }
+.menu-item { padding:8px 12px; font-size:13px; color:#d4d4d4; cursor:pointer; }
+.menu-item:hover { background:#171717; color:#facc15; }
+.menu-item.selected { color:#facc15; background:rgba(250,204,21,0.08); }
+
+/* Skeleton loading */
+@keyframes shimmer { 0% { background-position: -200px 0; } 100% { background-position: 200px 0; } }
+.skeleton { background: linear-gradient(90deg, #171717 25%, #1f1f1f 50%, #171717 75%); background-size: 400px 100%; animation: shimmer 1.2s infinite linear; border-radius:6px; }
