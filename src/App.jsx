@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard.jsx';
 import Parse from './pages/Parse.jsx';
 import History from './pages/History.jsx';
+import Championship from './pages/Championship.jsx';
 
 function NavItem({ to, children, end }) {
   return (
@@ -35,6 +36,7 @@ export default function App() {
           <nav className="flex items-center gap-1">
             <NavItem to="/" end>Dashboard</NavItem>
             <NavItem to="/parse">Paste / Parse</NavItem>
+            <NavItem to="/championship">🏆 Championship</NavItem>
             <NavItem to="/history">History</NavItem>
           </nav>
         </div>
@@ -44,6 +46,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/parse" element={<Parse />} />
+          <Route path="/championship" element={<Championship />} />
           <Route path="/history" element={<History />} />
         </Routes>
       </main>
